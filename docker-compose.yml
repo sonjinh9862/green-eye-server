@@ -1,0 +1,26 @@
+services:
+  app:
+    image: node:18-alpine
+    command: sh -c "npm install && npm run start:dev"
+    ports:
+      - 3000:3000
+    working_dir: /app
+    volumes:
+      - ./:/app
+    environment:
+      POSTGRES_HOST: postgres
+      POSTGRES_USER: sonjinh9862
+      POSTGRES_PASSWORD: park9862@@
+      POSTGRES_DB: test1
+  postgres:
+    image: postgres:latest
+    ports:
+      - 5432:5432
+    volumes:
+      - green-eye-volume:/var/lib/postgres
+    environment:
+      POSTGRES_USER: sonjinh9862
+      POSTGRES_PASSWORD: park9862@@
+      POSTGRES_DATABASE: test1
+volumes:
+  green-eye-volume:
