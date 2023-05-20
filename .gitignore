@@ -1,11 +1,11 @@
 .idea/
 .vscode/
 node_modules/
-src/
-test/
+# src/
+# test/
 tmp/
 temp/
-.dockerignore
-.eslintrc.js
-.prettierrc
-docker-compose
+# .dockerignore
+# .eslintrc.js
+# .prettierrc
+# docker-compose
